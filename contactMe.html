@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cm.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <title>His Name Is Bauyrzhan</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <div class="sidebar-btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">About Me</div>
+        <ul class="sidebar_outerul">
+            <li>
+                <a href="./mainPage.html">Main</a>
+            </li>
+            <li>
+                <a href="#" class="bck-btn">
+                    Background
+                    <span class="fa fa-caret-down first" aria-hidden="true"></span>
+                </a>
+                <ul class="bck-show">
+                    <li><a href="./Background_NSPM.html">National School of Physics and Math</a></li>
+                    <li><a href="./Background_NSPM.html">SDU University</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="hbs-btn">
+                    Hobbies 
+                    <span class="fa fa-caret-down second" aria-hidden="true"></span>
+                </a>
+                <ul class="hbs-show">
+                    <li><a href="./Hobbies.html">Boxing</a></li>
+                    <li><a href="./Hobbies.html">Athletics</a></li>
+                    <li><a href="./Hobbies.html">Mathematics</a></li>
+                    <li><a href="./Hobbies.html">Physics/Electronics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./Family.html">Family</a>
+            </li>
+            <li class="MainLi">
+                <a href="#">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Drop us a line!</h1>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message.."></textarea>
+
+            <div class="checkbox">
+                <input type="checkbox" id="emailList" name="emailList">
+                <label for="emailList">Sign up for our email list for updates, promotions, and more.</label>
+            </div>
+
+            <p class="disclaimer">
+                This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+            </p>
+
+            <div class="buttons">
+                <button type="submit" class="send-button">SEND</button>
+                <button type="button" class="cancel-button" onclick="clearForm()">CANCEL</button>
+            </div>
+            <div class="links_wrapper">
+                <nav class="links">
+                    <ul>
+                        <li><a href="https://www.instagram.com/_bauyrzhanulanuly?igsh=MXR0OW8xZ3ZibWxybw%3D%3D&utm_source=qr" class="inst"><span class="fa fa-instagram"></span></a></li>
+                        <li><a href="https://t.me/vxd1h5f" class="inst"><span class="fa fa-telegram"></span></a></li>
+                        <li><a href="https://t.me/vxd1h5f" class="inst"><span class="fa fa-facebook"></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </form>
+    </div>
+    <script>
+        function clearForm() {
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+    <script>
+        $('.sidebar ul li:nth-child(n+1)').hover(function(){
+            $('.sidebar ul li:last-child a').toggleClass("default");
+        });
+    </script>
+    <script src="js/mainMe.js"></script>
+    <script>
+        $('.sidebar ul ul li').hover(function(){
+            $('.sidebar ul li:last-child a').toggleClass("default");
+        });
+    </script>
+    <script>
+        $('.bck-btn').click(function(){
+            $('nav ul .bck-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.hbs-btn').click(function(){
+            $('nav ul .hbs-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.sidebar-btn').click(function(){
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+            $('.about-me').toggleClass("change");
+        });
+    </script>
+</body>
+</html>

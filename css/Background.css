@@ -1,0 +1,349 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Montserrat;
+}
+div {
+    user-select: none;
+}
+ol, ul, li {
+    list-style: none;
+    user-select: none;
+}
+blockquote, q {
+    quotes: none;
+    
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Mons/Montserrat-Regular.ttf);
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    color: white;
+    background-color: black;
+    width: 250px;
+    left: -250px;
+    line-height: 2;
+}
+.sidebar.show {
+    left: 0px;
+    transform: left 0.4s ease;
+}
+.sidebar-btn {
+    position: absolute;
+    left: 15px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor:alias;
+    transition: left 0.4s ease;
+}
+.sidebar-btn span {
+    color: white;
+    font-style: 30px;
+    line-height: 45px;
+}
+.sidebar-btn.click {
+    left: 260px;
+}   
+.sidebar-btn.click span::before {
+    content: '\f00d';
+}   
+.sidebar .text {
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2.5px;
+    line-height: 100px;
+}
+.sidebar ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li{
+    line-height: 70px;
+    font-size: 15px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.564); */
+}
+.sidebar ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 30px;
+    font-weight: 500;
+    display: block;
+    border-left: 3px solid transparent;
+}
+.sidebar ul li a:hover {
+    color: rgb(0, 197, 16);
+    background-color: rgb(4, 18, 8);
+    border-color: rgb(0, 197, 16);
+}
+.sidebar ul ul {
+    position: static;
+    width: 100%;
+    display: block;
+}
+.sidebar ul .hbs-show{
+    display: none;
+}
+.sidebar ul ul li {
+    line-height: 25px;
+    padding: 20px 0;
+    border-bottom: none;
+}
+.sidebar ul ul li a {
+    font-size: 16px;
+    margin-left: 40px;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
+}
+.bck-show li:first-child a {
+    border-color: cyan;
+    background-color: rgb(4, 18, 8);
+    color: cyan;
+}
+.bck-show li:nth-child(2) a {
+    border-color: cyan;
+    background-color: rgb(4, 18, 8);
+    color: cyan;
+}
+.bck-show li:nth-child(2) a.default {
+    color: white;
+    border-color: transparent;
+    background-color: black;
+}
+.bck-show li:first-child a.default {
+    color: white;
+    border-color: transparent;
+    background-color: black;
+}
+.sidebar ul ul li a:hover {
+    border-color: cyan;
+    color: cyan;
+}
+.sidebar ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: 0.4s;
+}
+.sidebar ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+nav ul .bck-show.show {
+    display: none;
+}
+nav ul .hbs-show.show1 {
+    display: block;
+}
+.lenta_NSPM {
+    margin: 20px 120px 120px 120px;
+}
+.lenta_NSPM.changed {
+    padding-left: 210px;
+}
+.lenta_NSPM_schoolPhotos{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    background-color: #f0f0f0;
+    border: 2px solid rgb(2, 192, 2); ;
+    border-left: none; 
+    border-right: none; 
+}
+.lenta_NSPM_schoolPhotos::-webkit-scrollbar {
+    display: none;
+}
+
+.lenta_NSPM_schoolPhotos-container1 {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    padding: 10px 10px 10px 20px;
+
+}
+
+img {
+    height: 300px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+.lenta_NSPM_schoolPhotos-container1 img:hover {
+    transform: scale(1.05);
+    height: 300px; 
+    border-radius: 10px; 
+    transition: 0.3s ease;
+}
+.Background_NSPM {
+    scale: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+} 
+.Background_NSPM.changed {
+    margin-left: 13%;
+    scale: 80%;
+}
+.Background_icons {
+    padding: 20px 30px 0 30px;
+    border: 2px solid rgb(2, 192, 2);
+    display: flex;
+    font-size: 18px;
+    text-align:center;
+    line-height: 30px;
+    gap: 100px;
+}
+.icons_inconarea {
+    width: 300px;
+    height: 250px;
+    align-items: center;
+}
+.icons_inconarea span {
+    margin-bottom: 40px;
+    margin-left: 20px;
+    font-size: 50px;
+}
+.icons_inconarea:first-child {
+    margin-top: 80px;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+.Background_largeText {
+    position: absolute;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    width: 700px;
+
+}
+.backfround_traingularsWithPhoto {
+    display: flex;
+    justify-content: space-between;
+}
+.gojo1:hover, .gojo2:hover, .gojo3:hover, .gojo4:hover  {
+    transform: scale(1.05);
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}
+.gojo1 {
+    width: 250px;
+    height: 600px;
+    object-fit:cover;
+    object-position: 0px -120px ;
+    margin-top: 70px;
+
+}
+.gojo2 {
+    object-position: 0px -90px ;
+    width: 250px;
+    height: 600px;
+    object-fit:cover;
+    scale: 90%;
+}
+
+.gojo3 {
+    width: 250px;
+    height: 600px;
+    object-fit:cover;
+    margin-top: 70px;
+    object-position: -50px -50px;
+
+}
+.gojo4 {
+    width: 250px;
+    height: 600px;
+    object-fit:cover;
+    scale: 90%;
+}
+
+.Background_SDU {
+    scale: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+} 
+.Background_SDU.changed {
+    margin-left: 13%;
+    scale: 80%;
+}
+.lenta_SDU {
+    margin: 30px 120px 120px 120px;
+}
+.lenta_SDU.changed {
+    padding-left: 210px;
+}
+.lenta_SDU_schoolPhotos{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    background-color: #f0f0f0;
+    border: 2px solid rgb(2, 192, 2); 
+    border-left: none; 
+    border-right: none; 
+}
+.lenta_SDU_schoolPhotos::-webkit-scrollbar {
+    display: none;
+}
+
+.lenta_SDU_schoolPhotos-container1 {
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+.lenta_SDU_schoolPhotos-container1 img:hover {
+    transform: scale(1.05);
+    height: 300px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}

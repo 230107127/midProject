@@ -1,0 +1,257 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Montserrat;
+}
+div {
+    user-select: none;
+}
+ol, ul, li {
+    list-style: none;
+    user-select: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Mons/Montserrat-Regular.ttf);
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    color: white;
+    background-color: black;
+    width: 250px;
+    left: -250px;
+    line-height: 2;
+}
+.sidebar.show {
+    left: 0px;
+    transform: left 0.4s ease;
+}
+.sidebar-btn {
+    position: absolute;
+    left: 15px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor:alias;
+    transition: left 0.4s ease;
+}
+.sidebar-btn span {
+    color: white;
+    font-style: 30px;
+    line-height: 45px;
+}
+.sidebar-btn.click {
+    left: 260px;
+}   
+.sidebar-btn.click span::before {
+    content: '\f00d';
+}   
+.sidebar .text {
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2.5px;
+    line-height: 100px;
+}
+.sidebar ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li{
+    line-height: 70px;
+    font-size: 15px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.564); */
+}
+.sidebar ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 30px;
+    font-weight: 500;
+    display: block;
+    border-left: 3px solid transparent;
+}
+.MainLi:first-child a {
+    color: rgb(0, 197, 16);
+    background-color: rgb(4, 18, 8);
+    border-color: rgb(0, 197, 16);
+}
+.MainLi:first-child a.default {
+    color: white;
+    border-color: transparent;
+    background-color: black;
+}
+.sidebar ul li a:hover {
+    color: rgb(0, 197, 16);
+    background-color: rgb(4, 18, 8);
+    border-color: rgb(0, 197, 16);
+}
+.sidebar ul ul {
+    position: static;
+    width: 100%;
+    display: none;
+}
+.sidebar ul ul li {
+    line-height: 25px;
+    padding: 20px 0;
+    border-bottom: none;
+}
+.sidebar ul ul li a {
+    font-size: 16px;
+    margin-left: 40px;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
+}
+.sidebar ul ul li a:hover {
+    border-color: cyan;
+    color: cyan;
+}
+.sidebar ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: 0.4s;
+}
+.sidebar ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+nav ul .bck-show.show {
+    display: block;
+}
+nav ul .hbs-show.show1 {
+    display: block;
+}
+.about-me {
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-me.change {
+    scale: 80%;
+    padding-left: 230px;
+    padding-right: 50px;
+}
+
+
+.about-me_content {
+    height: 100%;
+    display: flex;
+    gap: 150px;
+    justify-content: space-between;
+}
+.about-me_image img{
+    width: 400px;
+    height: 600px;
+    border: 2px solid rgb(0, 197, 16);
+    border-radius: 100px;
+}
+.about-me_image img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.about-me_description {
+    width: 720px;
+}
+
+.about-me_title {
+    margin-top: 15px;
+    font-size: 40px;
+    text-align: left;
+    line-height: 50px;
+}
+.about-me_stat {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-title {
+    font-size: 60px;
+    line-height: 100px;
+}
+
+.stat_description {
+    font-size: 18px;
+    color: #989899;
+}
+
+.orange {
+    color: rgb(0, 197, 16);
+}
+.Jobs, .Life, .Achievements {
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+    width: 220px;
+    text-align: center;
+    line-height: 25px;
+    padding: 30px 20px 20px 20px;
+    border-radius: 50px;
+    height: 200px;
+    margin-right: 20px;
+    font-weight: lighter;
+}
+.Jobs:hover, .Life:hover, .Achievements:hover {
+    transform: scale(1.15);
+    transition: 0.5s ease;
+}
+.Jobs {
+    background-color: rgba(254, 218, 170, 0.718);
+}
+.Life {
+    background-color: rgba(189, 183, 107, 0.47);
+}
+.Achievements {
+    background-color: rgba(182, 119, 119, 0.473);
+    margin-left: -30px;
+}
+.fc {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 197, 16);
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/family.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <title>His Name Is Bauyrzhan</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <div class="sidebar-btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">About Me</div>
+        <ul class="sidebar_outerul">
+            <li>
+                <a href="./mainPage.html">Main</a>
+            </li>
+            <li>
+                <a href="#" class="bck-btn">
+                    Background
+                    <span class="fa fa-caret-down first" aria-hidden="true"></span>
+                </a>
+                <ul class="bck-show">
+                    <li><a href="./Background_NSPM.html">National School of Physics and Math</a></li>
+                    <li><a href="./Background_NSPM.html">SDU University</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="hbs-btn">
+                    Hobbies 
+                    <span class="fa fa-caret-down second" aria-hidden="true"></span>
+                </a>
+                <ul class="hbs-show">
+                    <li><a href="./Hobbies.html">Boxing</a></li>
+                    <li><a href="./Hobbies.html">Athletics</a></li>
+                    <li><a href="./Hobbies.html">Mathematics</a></li>
+                    <li><a href="./Hobbies.html">Physics/Electronics</a></li>
+                </ul>
+            </li>
+            <li class="MainLi">
+                <a href="#">Family</a>
+            </li>
+            <li >
+                <a href="./contactMe.html">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="blog">
+        <div class="wrapper">
+            <div class="blog_header">
+                <div class="blog_header_title">My Family</div>
+            </div>
+            <div class="blog_content">
+                <div class="blog_content_first">
+                    <div class="blog_first_image1">
+                        <img src="./img/fam3.png" alt="">
+                    </div>
+                    <div class="blog_first_image2">
+                        <img src="./img/fam2.jpg" alt="">
+                    </div>
+                    <div class="blog_first_image3">
+                        <img src="./img/fam3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="blog_content_second">
+                    <div class="blog_content_second_item">
+                        <div class="blog_second_image first">
+                            <img src="./img/fath.png" alt="">
+                        </div>
+                        <div class="blog_item_wrapper">
+                            <div class="blog_title"> Ulan Ashinkhanuly (Father)
+                            </div>
+                            <div class="blog_time">Aug 29, 1982</div>
+                        </div>
+                    </div>
+                    <div class="blog_content_second_item">
+                        <div class="blog_second_image second">
+                            <img src="./img/mum.jpg" alt="">
+                        </div>
+                        <div class="blog_item_wrapper">
+                            <div class="blog_title">Aigul Musaeva (Mother)
+                            </div>
+                            <div class="blog_time">January 25, 1979</div>
+                        </div>
+                    </div>
+                    <div class="blog_content_second_item">
+                        <div class="blog_second_image third">
+                            <img src="./img/sis.jpg" alt="">
+                        </div>
+                        <div class="blog_item_wrapper">
+                            <div class="blog_title">Ulpan Ulankyzy (Sister)
+                            </div>
+                            <div class="blog_time">June 26, 2005</div>
+                        </div>
+                    </div>
+                    <div class="blog_content_second_item">
+                        <div class="blog_second_image third">
+                            <img src="./img/MySasuke.jpg" alt="">
+                        </div>
+                        <div class="blog_item_wrapper">
+                            <div class="blog_title">Akhan Ulanuly (Younger Brother)
+                            </div>
+                            <div class="blog_time">August 9, 2006</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        $('.sidebar ul li:nth-child(n+1)').hover(function(){
+            $('.sidebar ul li:nth-child(4) a').toggleClass("default");
+        });
+    </script>
+    <script src="js/mainMe.js"></script>
+    <script>
+        $('.sidebar ul ul li').hover(function(){
+            $('.sidebar ul li:nth-child(4) a').toggleClass("default");
+        });
+    </script>
+    <script>
+        $('.bck-btn').click(function(){
+            $('nav ul .bck-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.hbs-btn').click(function(){
+            $('nav ul .hbs-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.sidebar-btn').click(function(){
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+            $('.blog').toggleClass("changed");
+        });
+    </script>
+</body>
+</html>

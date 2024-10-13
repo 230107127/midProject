@@ -1,0 +1,323 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Montserrat;
+}
+div {
+    user-select: none;
+}
+ol, ul, li {
+    list-style: none;
+    user-select: none;
+}
+blockquote, q {
+    quotes: none;
+    
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Mons/Montserrat-Regular.ttf);
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    color: white;
+    background-color: black;
+    width: 250px;
+    left: -250px;
+    line-height: 2;
+}
+.sidebar.show {
+    left: 0px;
+    transform: left 0.4s ease;
+}
+.sidebar-btn {
+    position: absolute;
+    left: 15px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor:alias;
+    transition: left 0.4s ease;
+}
+.sidebar-btn span {
+    color: white;
+    font-style: 30px;
+    line-height: 45px;
+}
+.sidebar-btn.click {
+    left: 260px;
+}   
+.sidebar-btn.click span::before {
+    content: '\f00d';
+}   
+.sidebar .text {
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2.5px;
+    line-height: 100px;
+}
+.sidebar ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li{
+    line-height: 70px;
+    font-size: 15px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.564); */
+}
+.sidebar ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 30px;
+    font-weight: 500;
+    display: block;
+    border-left: 3px solid transparent;
+}
+.sidebar ul li a:hover {
+    color: rgb(0, 197, 16);
+    background-color: rgb(4, 18, 8);
+    border-color: rgb(0, 197, 16);
+}
+.sidebar ul ul {
+    position: static;
+    width: 100%;
+    display: none;
+}
+.sidebar ul .hbs-show{
+    display: block;
+}
+.sidebar ul ul li {
+    line-height: 25px;
+    padding: 20px 0;
+    border-bottom: none;
+}
+.sidebar ul ul li a {
+    font-size: 16px;
+    margin-left: 40px;
+    padding-left: 10px;
+    border-left: 3px solid transparent;
+}
+nav ul .hbs-show li a{
+    border-color: cyan;
+    color: cyan;
+}
+nav.hbs-show li a.default{
+    color: white;
+    border-color: transparent;
+    background-color: black;
+
+}
+.sidebar ul ul li a:hover {
+    border-color: cyan;
+    color: cyan;
+}
+.sidebar ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: 0.4s;
+}
+.sidebar ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+nav ul .bck-show.show {
+    display: block;
+}
+nav ul .hbs-show.show1 {
+    display: none;
+}
+.our-services_wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.our-services_wrapper.changed {
+    max-width: 1080px;
+    scale: 80%;
+    margin-left: 280px;
+}
+.our-services_header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.our-services_header_title {
+    font-size: 54px;
+    max-width: 500px;
+}
+
+.our-services_header_buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.primary-btn {
+    height: 75px;
+    width: 200px;
+    background-color: rgb(30, 149, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.secondary-btn {
+    color: #ffffff;
+    box-sizing: border-box;
+    height: 75px;
+    width: 200px;
+    background-color: rgb(221, 147, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.our-services_content {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    grid-template-rows: repeat(2, 250px);
+    row-gap: 80px;
+    column-gap: 30px;
+}
+
+.our-service_image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+}
+.our-service_title4, .our-service_title5,  .our-service_title6{
+    padding: 5px 0;
+    border:2px solid orange;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.our-service_title1, .our-service_title2,  .our-service_title3{    
+    padding: 5px 0;
+    border:2px solid rgb(30, 149, 0);
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 23px;
+    width: 350px;
+}
+.our-service_title4.changed, .our-service_title5.changed,  .our-service_title6.changed{ 
+    margin-top: 250px;
+}   
+.our-service_description {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.our-service_learn-more {
+    margin-top: 40px;
+    margin-left: 40px;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+
+}
+
+.our-service_learn-more span {
+    font-size: 25px;
+}
+
+
+.get-quote-today {
+    margin-top: 200px;
+    width: 100%;
+    height: 640px;
+    background-image: url("./assets/get-quote-today.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.our-service_learn-more .sportsphoto {
+    display: none;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+}
+.our-service_learn-more .academics {
+    display: none;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+}
+.stohide.changed {
+    display: none;
+}
+.atohide.changed {
+    display: none;
+}
+.our-service_learn-more .academics.changed {
+    display: block;
+}
+.our-service_learn-more .sportsphoto.changed {
+    display: block;
+}
+.sportsphoto:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    border: 3px solid rgb(33, 187, 33);
+}
+.academics:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    border: 3px solid orange;
+}

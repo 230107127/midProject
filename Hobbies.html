@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hobbies_style.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <title>His Name Is Bauyrzhan</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <div class="sidebar-btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">About Me</div>
+        <ul class="sidebar_outerul">
+            <li class="MainLi">
+                <a href="./mainPage.html">Main</a>
+            </li>
+            <li>
+                <a href="#" class="bck-btn">
+                    Background
+                    <span class="fa fa-caret-down first" aria-hidden="true"></span>
+                </a>
+                <ul class="bck-show" >
+                    <li class="NSPM"><a href="./Background_NSPM.html">National School of Physics and Math</a></li>
+                    <li><a href="#SDU">SDU University</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="hbs-btn">
+                    Hobbies 
+                    <span class="fa fa-caret-down second" aria-hidden="true"></span>
+                </a>
+                <ul class="hbs-show">
+                    <li><a href="#">Boxing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="#">Physics/Electronics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./Family.html">Family</a>
+            </li>
+            <li>
+                <a href="./contactMe.html">Contact ME</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="our-services">
+        <div class="our-services_wrapper">
+            <div class="our-services_header">
+                <div class="our-services_header_title">My Hobbies</div>
+                <div class="our-services_header_buttons">
+                    <div class="primary-btn">Sports</div>
+                    <div class="secondary-btn">Academical</div>
+                </div>
+            </div>
+            <div class="our-services_content">
+                <div class="our-service">
+                    <div class="our-service_image project-plan"></div>
+                    <div class="our-service_title1">Boxing</div>
+                    <div class="our-service_description">I've been boxing for about 2 years and participated in competition. 
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="stohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/boxing1.JPG" alt="" class="sportsphoto">
+                    </div>
+                </div>
+                <div class="our-service">
+                    <div class="our-service_image project-man"></div>
+                    <div class="our-service_title2">Athletics</div>
+                    <div class="our-service_description">
+                        I have been doing athletics, running and street workout for about 2 years.
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="stohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/gym1.jpg" alt="" class="sportsphoto">
+                    </div>
+                </div>
+                <div class="our-service">
+                    <div class="our-service_image gen-cont"></div>
+                    <div class="our-service_title3">Taekwondo</div>
+                    <div class="our-service_description">Was in taekwondo in childhood for 1-1.5 years and participated in competitions.
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="stohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/twe.jpg" alt="" class="sportsphoto">
+                    </div>
+                </div>
+                <div class="our-service">
+                    <div class="our-service_image int-des"></div>
+                    <div class="our-service_title4">Mathematics</div>
+                    <div class="our-service_description">Relatively good at math and was the member of SMO.
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="atohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/me3.jpg" alt="" class="academics">
+                    </div>
+                </div>
+                <div class="our-service">
+                    <div class="our-service_image ext-des"></div>
+                    <div class="our-service_title5">Electronics & Physics</div>
+                    <div class="our-service_description">Doing good with physics/electronics and junior assistant of the technopark.
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="atohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/me2.jpg" alt="" class="academics">
+                    </div>
+                </div>
+                <div class="our-service">
+                    <div class="our-service_image spa-pla"></div>
+                    <div class="our-service_title6">Reading and Freewriting</div>
+                    <div class="our-service_description">Love reading books on free time, but to be honest last time I read a long ago.  
+                    </div>
+                    <div class="our-service_learn-more">
+                        <div class="atohide">
+                            <span class="fa fa-camera"></span>
+                            Click Academics to see
+                        </div>
+                        <img src="./img/me8.jpg" alt="" class="academics">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('li').hover(function(){
+            $('.hbs-show li a').toggleClass("default");
+        });
+    </script>
+    <script>
+        $('.bck-btn').click(function(){
+            $('nav ul .bck-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.hbs-btn').click(function(){
+            $('nav ul .hbs-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.sidebar-btn').click(function(){
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+            $('.our-services_wrapper').toggleClass("changed");
+        });
+    </script>
+    <script>
+        $('.primary-btn').click(function(){
+            $('.our-service_learn-more .sportsphoto').toggleClass("changed");
+            $('.stohide').toggleClass("changed");
+            $('.our-service_title4').toggleClass("changed");
+            $('.our-service_title5').toggleClass("changed");
+            $('.our-service_title6').toggleClass("changed");
+        });
+    </script>
+    <script>
+        $('.secondary-btn').click(function(){
+            $('.our-service_learn-more .academics').toggleClass("changed");
+            $('.atohide').toggleClass("changed");
+        });
+    </script>
+</html>

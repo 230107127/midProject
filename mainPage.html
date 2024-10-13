@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleMainPage.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <title>His Name Is Bauyrzhan</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <div class="sidebar-btn">
+        <span class="fa fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">About Me</div>
+        <ul class="sidebar_outerul">
+            <li class="MainLi">
+                <a href="./mainPage.html">Main</a>
+            </li>
+            <li>
+                <a href="#" class="bck-btn">
+                    Background
+                    <span class="fa fa-caret-down first" aria-hidden="true"></span>
+                </a>
+                <ul class="bck-show">
+                    <li><a href="./Background_NSPM.html">National School of Physics and Math</a></li>
+                    <li><a href="./Background_NSPM.html">SDU University</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="hbs-btn">
+                    Hobbies 
+                    <span class="fa fa-caret-down second" aria-hidden="true"></span>
+                </a>
+                <ul class="hbs-show">
+                    <li><a href="./Hobbies.html">Boxing</a></li>
+                    <li><a href="./Hobbies.html">Athletics</a></li>
+                    <li><a href="./Hobbies.html">Mathematics</a></li>
+                    <li><a href="./Hobbies.html">Physics/Electronics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./Family.html">Family</a>
+            </li>
+            <li>
+                <a href="./contactMe.html">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="about-me">
+        <div class="about-me_wrapper">
+            <div class="about-me_content">
+                <div class="about-me_image">
+                    <img src="./img/me4.jpg" alt="">
+                </div>
+                <div class="about-me_description">
+                    <div class="about-me_title">Starting junior full-stack developer, proud of Kazakhstan, and just a nice guy. </div>
+                    <div class="about-me_stat">
+                        <div class="about-executed-projects">
+                            <div class="stat-title">
+                                72<span class="orange"> kg</span>
+                            </div>
+                            <div class="stat_description">of body weight</div>
+                            <div class="Achievements">
+                                <div class="fc">
+                                    Interesting fact about me: <br><br>
+                                </div>
+                                I passed the SAT, IELTS NuEt, UNT with very good results from the first and entered the applied in the SDU and NU, but I never knew these universities
+                            </div>
+                        </div>
+                        <div class="about-experience">
+                            <div class="stat-title">
+                                18<span class="orange"> y.o</span>
+                            </div>
+                            <div class="stat_description">Life Experience</div>
+                            <div class="Life">
+                                <div class="fc">
+                                    Interesting fact about me: <br><br>
+                                </div>
+                                I have competed in many taekwondo, boxing, and math competitions and have never beaten my opponent or taken any first place.
+                            </div>
+                        </div>
+                        <div class="about-clients">
+                            <div class="stat-title">
+                                178<span class="orange"> cm</span>
+                            </div>
+                            <div class="stat_description">of body height</div>
+                            <div class="Jobs">
+                                <div class="fc">
+                                    Interesting fact about me: <br><br>
+                                </div>
+                                I worked as a waiter at the age of 15 and officially as a mathematics teacher at the UNT preparation center last year.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interesting_facts">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.sidebar ul li:nth-child(n+1)').hover(function(){
+            $('.sidebar ul li:first-child a').toggleClass("default");
+        });
+    </script>
+    <script src="js/mainMe.js"></script>
+    <script>
+        $('.sidebar ul ul li').hover(function(){
+            $('.sidebar ul li:first-child a').toggleClass("default");
+        });
+    </script>
+    <script>
+        $('.bck-btn').click(function(){
+            $('nav ul .bck-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.hbs-btn').click(function(){
+            $('nav ul .hbs-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+    </script>
+    <script>
+        $('.sidebar-btn').click(function(){
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+            $('.about-me').toggleClass("change");
+        });
+    </script>
+</body>
+</html>
